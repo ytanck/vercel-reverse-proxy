@@ -5,6 +5,6 @@
     { "source": "/httpproxy/:match/:url*", "destination": "http://:match/:url*" },
     { "source": "/httpproxy/:match/:url*/", "destination": "http://:match/:url*/" },
     { "source": "/openai/:match/:url*", "destination": "https://api.opanai.com/:match/:url*" },
-    { "source": "/openai/:match/:url*/", "destination": "https://api.opanai.com/:match/:url*/" },
+    { "source": "/openai/:match/:url*/", "destination": "https://api.opanai.com/:match/:url*/" }
   ]
 }

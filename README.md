@@ -37,15 +37,10 @@ vercel现在每月有100GB的免费流量。本人又基于[cloudflare](https://
 映射规则为/proxy/url映射到https接口，/httpproxy/url映射到http接口
 
 也可用于github下载加速。假如原始链接是https://objects.githubusercontent.com/github-production-release-asset-2e65be/xxxxxx 
-改为https://替换为你自己的域名.com/proxy/objects.githubusercontent.com/github-production-release-asset-2e65be/xxxxxx 就可以加速了。下图是github原始链接和加速后对比。可以看到效果杠杠的，每秒50kb小水管变成了每秒2mb的大水管
-![github-download](img/github-download.png)
+改为https://替换为你自己的域名.com/proxy/objects.githubusercontent.com/github-production-release-asset-2e65be/xxxxxx 就可以加速了。
 
 例3 访问https://替换为你自己的域名.com/proxy/www.google.com/search?q=vercel-reverse-proxy
 实际上会替换为https://www.google.com/search?q=vercel-reverse-proxy
 ![demo3](img/demo3.png)
 代理google搜索结果页面
 
-
-## 另外一种方法也是用cloudflare的worker，但不用在链接后面拼/proxy/xxx,直接用部署后的链接或自定义域名就可以代理
-
-仓库地址：[cloudflare-worker-proxy](https://github.com/ytanck/cloudflare-worker-proxy)供大家参考

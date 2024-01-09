@@ -3,11 +3,11 @@
 
 本项目是vercel反向代理。完全免费，万能代理，可代理全网一切接口，包括openai、github、google等等。http和https接口、单页面均可代理，在网络环境不好的情况下均可用。（直接浏览器打开代理页面的情况下，由于某些js和css的路径可能会不对造成访问不到，页面样式有点小问题。）
 
-vercel现在每月有100GB的免费流量。本人又基于[cloudflare](https://www.cloudflare.com/)搞了一个反向代理，仓库地址：[cloudflare-reverse-proxy](https://github.com/gaboolic/cloudflare-reverse-proxy)供大家参考，也作为一个备份吧。
+vercel现在每月有100GB的免费流量。本人又基于[cloudflare](https://www.cloudflare.com/)搞了一个反向代理，仓库地址：[cloudflare-reverse-proxy](https://github.com/ytanck/cloudflare-reverse-proxy)供大家参考，也作为一个备份吧。
 我自己的vercel项目部署失败，疑似被ban，各位别直接一键部署了，先fork到自己的仓库改改项目名 删掉readme试试吧。实在不行 移步上面cloudflare项目，cloudflare的格局比较大
 
 ## 部署
-[![Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/gaboolic/vercel-reverse-proxy)
+[![Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/ytanck/vercel-reverse-proxy)
 
 
 ## 使用方法
@@ -31,7 +31,7 @@ vercel现在每月有100GB的免费流量。本人又基于[cloudflare](https://
 
 所以使用的时候只需要设置一下openai.api_base="https://你的域名/proxy/api.openai.com/v1" 就可以了
 
-例2 访问https://替换为你自己的域名.com/proxy/raw.githubusercontent.com/gaboolic/vercel-reverse-proxy/main/vercel.json
+例2 访问https://替换为你自己的域名.com/proxy/raw.githubusercontent.com/ytanck/vercel-reverse-proxy/main/vercel.json
 实际上会替换为https://raw.githubusercontent.com/gaboolic/vercel-reverse-proxy/main/vercel.json
 ![demo2](img/demo2.png)
 映射规则为/proxy/url映射到https接口，/httpproxy/url映射到http接口
@@ -44,3 +44,8 @@ vercel现在每月有100GB的免费流量。本人又基于[cloudflare](https://
 实际上会替换为https://www.google.com/search?q=vercel-reverse-proxy
 ![demo3](img/demo3.png)
 代理google搜索结果页面
+
+
+## 另外一种方法也是用cloudflare的worker，但不用在链接后面拼/proxy/xxx,直接用部署后的链接或自定义域名就可以代理
+
+仓库地址：[cloudflare-worker-proxy](https://github.com/ytanck/cloudflare-worker-proxy)供大家参考
